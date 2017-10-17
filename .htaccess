@@ -1,8 +1,8 @@
 RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /abtmtorneos/index.php/$1 [L]
-    ErrorDocument 404 /abtmtorneos/index.php
+    RewriteRule ^(.*)$ /institucion_educativa/index.php/$1 [L]
+    ErrorDocument 404 /institucion_educativa/index.php
 
 
 <FilesMatch ".(ttf|otf|woff)$">
