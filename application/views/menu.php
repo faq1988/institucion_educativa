@@ -27,6 +27,8 @@
     <!-- Custom styles for this template -->
     <link href="<?=base_url()?>bootstraptemplate/css/sb-admin.css" rel="stylesheet">
 
+    <link href="<?=base_url()?>bootstraptemplate/css/jumbotron.css" rel="stylesheet">
+
 
 
   </head>
@@ -75,17 +77,59 @@
           </li>
 
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?=base_url()?>Welcome/eventos">
               <i class="fa fa-fw fa-area-chart"></i>
               <span class="nav-link-text">
-                Menu 3</span>
+                Eventos</span>
             </a>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
             <a class="nav-link" href="#">
               <i class="fa fa-fw fa-table"></i>
               <span class="nav-link-text">
-                Menu 4</span>
+                Alumnos</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-table"></i>
+              <span class="nav-link-text">
+                Maestros</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-table"></i>
+              <span class="nav-link-text">
+                Aulas</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-table"></i>
+              <span class="nav-link-text">
+                Estadísticas</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-table"></i>
+              <span class="nav-link-text">
+                Menú semanal</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-table"></i>
+              <span class="nav-link-text">
+                Circulares</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-table"></i>
+              <span class="nav-link-text">
+                Contacto</span>
             </a>
           </li>
 
