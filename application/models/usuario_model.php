@@ -22,6 +22,25 @@ else
 	return false;
 }
 
+
+
+function crearInscripcion($data, $torneo, $tipo){
+		
+		$this->db->insert('persona', array('nombre'=>$data['nombre'], 'categoria'=>$data['categoria'], 'torneo'=>$torneo));
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 

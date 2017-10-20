@@ -64,14 +64,14 @@
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseInscripciones" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-wrench"></i>
               <span class="nav-link-text">
-                Menu 2</span>
+                Alumnos</span>
             </a>
             <ul class="sidenav-second-level collapse" id="collapseInscripciones">
               <li>
-                <a href="#">Item 1</a>
+                <a href="<?=base_url()?>Welcome/crear_alumno">Nuevo</a>
               </li>
               <li>
-                <a href="#">Item 2</a>
+                <a href="#">Buscar</a>
               </li>
             </ul>
           </li>
@@ -83,13 +83,7 @@
                 Eventos</span>
             </a>
           </li>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-            <a class="nav-link" href="#">
-              <i class="fa fa-fw fa-table"></i>
-              <span class="nav-link-text">
-                Alumnos</span>
-            </a>
-          </li>
+          
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
             <a class="nav-link" href="#">
               <i class="fa fa-fw fa-table"></i>
@@ -126,7 +120,7 @@
             </a>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?=base_url()?>Welcome/contacto">
               <i class="fa fa-fw fa-table"></i>
               <span class="nav-link-text">
                 Contacto</span>
