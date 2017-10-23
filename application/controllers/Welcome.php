@@ -58,6 +58,18 @@ class Welcome extends CI_Controller {
 	$this -> load -> view('contacto');	
   }
 
+  public function crear_evento()
+  {
+  	if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $this -> load -> view('menu');
+    $this -> load -> view('header');
+	$this -> load -> view('crear_evento');	
+  }
+
 
 
 	public function key()

@@ -83,6 +83,14 @@
                 Eventos</span>
             </a>
           </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/crear_evento">
+              <i class="fa fa-fw fa-area-chart"></i>
+              <span class="nav-link-text">
+                Crear evento</span>
+            </a>
+          </li>
           
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
             <a class="nav-link" href="#">
