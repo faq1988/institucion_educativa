@@ -60,7 +60,7 @@
                     if (isset($eventos)){
                      for($i=0; $i<sizeof($eventos); $i++){ ?>
                 <tr>
-                  <th scope="row">1</th>
+                  <th scope="row"><?php echo $i+1;?></th>
                   <td><?php echo $eventos[$i]->fechahora;?></td>
                   <td><?php echo $eventos[$i]->accion;?></td>
                   <td><?php echo $eventos[$i]->descripcion;?></td>

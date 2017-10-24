@@ -37,6 +37,7 @@ class Alumno_controller extends CI_Controller {
   {
 		$evento = $this->input->post('tipo_evento');
 		$lista_alumnos= $this->input->post('lista_alumnos');
+		$descripcion= $this->input->post('descripcion');
 /*
       $data = array(
       'evento' => $this->input->post('tipo_evento'),
@@ -46,7 +47,7 @@ class Alumno_controller extends CI_Controller {
 */
 			for ($i=0 ; $i< sizeof($lista_alumnos); $i++)
 			{
-      		$this->evento_model->crear_eventos($evento, null, $lista_alumnos[$i]);
+      		$this->evento_model->crear_eventos($evento, $descripcion, $lista_alumnos[$i]);
 			}
       redirect("welcome/eventos");
   }

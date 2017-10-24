@@ -21,6 +21,17 @@
 
   <?php
   echo form_open('Alumno_controller/registrar_evento');
+
+  $descripcion = array(
+      'name' => 'descripcion',
+      'id'  => 'descripcion',
+      'value' => '',
+      'maxlength' => '30',
+      'size'  =>  '30',
+      'style' =>  'width:50%',
+      'class' => 'form-control',
+
+    );
   ?>
 
 <div class="btn-group btn-group-lg" data-toggle="buttons">
@@ -33,16 +44,27 @@
   <label class="btn btn-success">
     <input type="radio" name="tipo_evento" value="Baño" id="option3" autocomplete="off"> Baño
   </label>
+  
 </div>
 
 </br>
 </br>
-</br>
-</br>
 
+
+<?php
+  echo form_label('Descripción', 'descripcion');
+
+  echo form_input($descripcion);
+
+  echo '</br>';
+?>
 
 
 <div class="container">
+
+
+
+
 <table class="table">
   <thead class="thead-default">
     <tr>
