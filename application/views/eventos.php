@@ -16,7 +16,7 @@
 
 
     <!--center>
-     <img src="<?=base_url()?>img/image.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"> 
+     <img src="<?=base_url()?>img/image.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">
 </center-->
 
 <center>
@@ -25,7 +25,7 @@
     <div class="carousel-item active">
       <img class="d-block img-fluid" src="<?=base_url()?>img/image.jpg" alt="First slide">
     </div>
-    
+
   </div>
 </div>
 
@@ -44,38 +44,31 @@
 
 </br>
 
+<?php
+    if (isset($eventos)){
+     for($i=0; $i<sizeof($eventos); $i++){ ?>
+<div class="container">
+            <table class="table">
+              <thead class="thead-default">
+                <tr>
+                  <th>#</th>
+                  <th>Horario</th>
+                  <th>Evento</th>
+                  <th>Descripcion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td><?php echo $eventos[$i]->fechahora;?></td>
+                  <td><?php echo $eventos[$i]->accion;?></td>
+                  <td><?php echo $eventos[$i]->descripcion;?></td>
+                </tr>
 
-<table class="table">
-  <thead class="thead-default">
-    <tr>
-      <th>#</th>
-      <th>Horario</th>
-      <th>Evento</th>
-      <th>Descripcion</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>12:00</td>
-      <td>Comer</td>
-      <td>Ha comido poco ultimamente</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>13:00</td>
-      <td>Dormir</td>
-      <td>Durmió toda la tarde</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>14:00</td>
-      <td>Diversión</td>
-      <td>Le ha gustado jugar con sus amiguitos</td>
-    </tr>
-  </tbody>
-</table>
-
+              </tbody>
+            </table>
+          </div>
+      <?php } }?>
 
 </center>
 
