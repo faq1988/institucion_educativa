@@ -91,7 +91,7 @@
                 Crear evento</span>
             </a>
           </li>
-          
+
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
             <a class="nav-link" href="#">
               <i class="fa fa-fw fa-table"></i>
@@ -114,7 +114,7 @@
             </a>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?=base_url()?>Welcome/menu_semanal">
               <i class="fa fa-fw fa-table"></i>
               <span class="nav-link-text">
                 Menú semanal</span>

@@ -84,6 +84,25 @@ class Welcome extends CI_Controller {
   }
 
 
+	public function menu_semanal()
+	{
+		if (!$this->session->userdata('username'))
+		{
+			redirect('login');
+		}
+		$data=array();
+		$this->load->model('menu_model');
+		$menu=  $this->menu_model->obtener_menu();
+
+		if (isset($menu))
+		$data['menu']= $menu->result();
+
+		$this -> load -> view('menu');
+		$this -> load -> view('header');
+		$this -> load -> view('menu_semanal', $data);
+	}
+
+
 
 	public function key()
 	{
