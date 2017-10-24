@@ -61,7 +61,7 @@ class Welcome extends CI_Controller {
 
     $this -> load -> view('menu');
     $this -> load -> view('header');
-	$this -> load -> view('contacto');
+		$this -> load -> view('contacto');
   }
 
   public function crear_evento()
@@ -71,9 +71,16 @@ class Welcome extends CI_Controller {
       redirect('login');
     }
 
+		$data=array();
+		$this->load->model('persona_model');
+		$alumnos=  $this->persona_model->obtener_personas('ALUMNO');
+
+		if (isset($alumnos))
+		$data['alumnos']= $alumnos->result();
+
     $this -> load -> view('menu');
     $this -> load -> view('header');
-	$this -> load -> view('crear_evento');
+		$this -> load -> view('crear_evento', $data);
   }
 
 

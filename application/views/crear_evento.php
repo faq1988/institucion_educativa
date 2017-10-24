@@ -13,16 +13,25 @@
           <li class="breadcrumb-item active">Inicio</li>
         </ol>
 
+
+
+
+
 <center>
+
+  <?php
+  echo form_open('Alumno_controller/registrar_evento');
+  ?>
+
 <div class="btn-group btn-group-lg" data-toggle="buttons">
   <label class="btn btn-success">
-    <input type="radio" name="options" id="option1" autocomplete="off"> Evento 1
+    <input type="radio" name="tipo_evento" value="Dormir" id="option1" autocomplete="off"> Dormir
   </label>
   <label class="btn btn-success">
-    <input type="radio" name="options" id="option2" autocomplete="off"> Evento 2
+    <input type="radio" name="tipo_evento" value="Comer" id="option2" autocomplete="off"> Comer
   </label>
   <label class="btn btn-success">
-    <input type="radio" name="options" id="option3" autocomplete="off"> Evento 3
+    <input type="radio" name="tipo_evento" value="Baño" id="option3" autocomplete="off"> Baño
   </label>
 </div>
 
@@ -30,6 +39,7 @@
 </br>
 </br>
 </br>
+
 
 
 <div class="container">
@@ -40,33 +50,33 @@
       <th>DNI</th>
       <th>Nombre</th>
       <th>Edad</th>
+      <th>Seleccionar</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>12321654</td>
-      <td>Lopez, Pedro</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>32654987</td>
-      <td>Sanchez, Sofia</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>54789654</td>
-      <td>Garcia, Luis</td>
-      <td>3</td>
-    </tr>
+            <?php
+                if (isset($alumnos)){
+                 for($i=0; $i<sizeof($alumnos); $i++){ ?>
+            <tr>
+              <th scope="row">1</th>
+              <td><?php echo $alumnos[$i]->dni;?></td>
+              <td><?php echo $alumnos[$i]->apellido;?>, <?php echo $alumnos[$i]->nombre;?></td>
+              <td><?php echo $alumnos[$i]->edad;?></td>
+              <?php echo "<td><input type='checkbox' name='lista_alumnos[]' value='". $alumnos[$i]->id . "' </td>"; ?>
+            </tr>
+            <?php } }?>
   </tbody>
 </table>
 </div>
 
 
+<?php
+echo form_submit('enviar','Enviar');
+echo form_close();
+?>
+
 </center>
+
 
 
 
