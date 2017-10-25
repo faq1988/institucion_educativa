@@ -71,7 +71,7 @@
                 <a href="<?=base_url()?>Welcome/crear_alumno">Nuevo</a>
               </li>
               <li>
-                <a href="#">Buscar</a>
+                <a href="<?=base_url()?>Welcome/buscar_alumno">Buscar</a>
               </li>
             </ul>
           </li>
@@ -93,7 +93,7 @@
           </li>
 
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?=base_url()?>Welcome/crear_maestro">
               <i class="fa fa-fw fa-table"></i>
               <span class="nav-link-text">
                 Maestros</span>

@@ -103,6 +103,37 @@ class Welcome extends CI_Controller {
 	}
 
 
+  public function crear_maestro()
+  {
+    if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $this -> load -> view('menu');
+    $this -> load -> view('header');
+    $this -> load -> view('crear_maestro');
+  }
+
+  public function buscar_alumno()
+  {
+    if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $data=array();
+    $this->load->model('persona_model');
+    $alumnos=  $this->persona_model->obtener_personas('ALUMNO');
+
+    if (isset($alumnos))
+    $data['alumnos']= $alumnos->result();
+
+    $this -> load -> view('menu');
+    $this -> load -> view('header');
+    $this -> load -> view('buscar_alumno', $data);
+  }
+
 
 	public function key()
 	{
