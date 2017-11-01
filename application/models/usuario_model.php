@@ -32,6 +32,12 @@ function crearInscripcion($data, $torneo, $tipo){
 
 
 
+public function obtener_usuario($username){
+
+$this->db->where('username', $username);
+$q = $this->db->get('usuario');
+if ($q->num_rows() >0 ) return $q;//->result();
+}
 
 
 

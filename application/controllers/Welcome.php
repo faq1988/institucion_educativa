@@ -134,6 +134,29 @@ class Welcome extends CI_Controller {
     $this -> load -> view('buscar_alumno', $data);
   }
 
+    public function ver_mensajes_alumno()
+  {
+    if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $this->load->model('usuario_model');
+    $usuario= $this->usuario_model->obtener_usuario($this->session->userdata('username')) ->result();
+
+    $data=array();
+    $this->load->model('sistema_model');
+    $mensajes=  $this->sistema_model->obtener_mensajes_alumno($usuario[0]->id_persona);
+
+    if (isset($mensajes))
+    $data['mensajes']= $mensajes->result();
+
+    $this -> load -> view('menu');
+    $this -> load -> view('header');
+    $this -> load -> view('mensajes_alumnos', $data);
+  }
+
+
 
 	public function key()
 	{

@@ -44,21 +44,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu1">
-            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseTorneos" data-parent="#exampleAccordion">
-              <i class="fa fa-fw fa-wrench"></i>
-              <span class="nav-link-text">
-                Menu 1</span>
-            </a>
-            <ul class="sidenav-second-level collapse" id="collapseTorneos">
-              <li>
-                <a href="#">Item 1</a>
-              </li>
-              <li>
-                <a href="#">Item 2</a>
-              </li>
-            </ul>
-          </li>
+        
 
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu2">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseInscripciones" data-parent="#exampleAccordion">

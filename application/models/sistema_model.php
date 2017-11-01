@@ -21,6 +21,12 @@ function crear_contacto($data){
 	}
 
 
+function obtener_mensajes_alumno($id_tutor)
+{
+	$this->db->where('id_tutor =', $id_tutor);
+	$query= $this->db->get('mensajes_alumnos');      
+    if ($query->num_rows() >0 ) return $query;//->result();
+}
 
 
 

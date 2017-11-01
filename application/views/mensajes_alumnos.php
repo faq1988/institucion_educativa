@@ -15,8 +15,6 @@
 
 
 
-
-
 <center>
 
  
@@ -31,22 +29,22 @@
   <thead class="thead-default">
     <tr>
       <th>#</th>
-      <th>DNI</th>
-      <th>Nombre</th>
-      <th>Edad</th>
-      <th>Seleccionar</th>
+      <th>Fecha</th>
+      <th>Asunto</th>
+      <th>Mensaje</th>
+      
+      
     </tr>
   </thead>
   <tbody>
             <?php
-                if (isset($alumnos)){
-                 for($i=0; $i<sizeof($alumnos); $i++){ ?>
+                if (isset($mensajes)){
+                 for($i=0; $i<sizeof($mensajes); $i++){ ?>
             <tr>
-              <th scope="row"><?php echo $alumnos[$i]->id;?></th>
-              <td><?php echo $alumnos[$i]->dni;?></td>
-              <td><?php echo $alumnos[$i]->apellido;?>, <?php echo $alumnos[$i]->nombre;?></td>
-              <td><?php echo $alumnos[$i]->edad;?></td>
-              <?php echo "<td><input type='checkbox' name='lista_alumnos[]' value='". $alumnos[$i]->id . "' </td>"; ?>
+              <th scope="row"><?php echo $mensajes[$i]->id;?></th>
+              <td><?php echo $mensajes[$i]->fechahora;?></td>
+              <td><?php echo $mensajes[$i]->asunto;?></td>
+              <td><?php echo $mensajes[$i]->mensaje;?></td>              
             </tr>
             <?php } }?>
   </tbody>
@@ -56,8 +54,6 @@
 
 
 </center>
-
-
 
 
 

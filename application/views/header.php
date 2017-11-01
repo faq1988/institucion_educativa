@@ -2,7 +2,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle mr-lg-2" href="#" id="messagesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-fw fa-envelope"></i>
-              <span class="d-lg-none">Messages
+              <span class="d-lg-none">Mensajes
                 <span class="badge badge-pill badge-primary">12 New</span>
               </span>
               <span class="new-indicator text-primary d-none d-lg-block">
@@ -10,8 +10,8 @@
                 <span class="number">12</span>
               </span>
             </a>
-            <div class="dropdown-menu" aria-labelledby="messagesDropdown">
-              <h6 class="dropdown-header">New Messages:</h6>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
+              <h6 class="dropdown-header">Últimos mensajes:</h6>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">
                 <strong>David Miller</strong>
@@ -31,8 +31,8 @@
                 <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item small" href="#">
-                View all messages
+              <a class="dropdown-item small" href="<?=base_url()?>Welcome/ver_mensajes_alumno">
+                Ver mensajes
               </a>
             </div>
           </li>
@@ -47,7 +47,7 @@
                 <span class="number">6</span>
               </span>
             </a>
-            <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
               <h6 class="dropdown-header">New Alerts:</h6>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">
@@ -85,7 +85,8 @@
               </a>
             </div>
           </li>
-          <li class="nav-item">
+
+          <!--li class="nav-item">
             <form class="form-inline my-2 my-lg-0 mr-lg-2">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search for...">
@@ -96,7 +97,8 @@
                 </span>
               </div>
             </form>
-          </li>
+          </li-->
+
           <li class="nav-item">
             <a class="nav-link" href="<?=base_url()?>login/logout">
               <i class="fa fa-fw fa-sign-out"></i>
