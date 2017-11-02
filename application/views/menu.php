@@ -29,6 +29,8 @@
 
     <link href="<?=base_url()?>bootstraptemplate/css/jumbotron.css" rel="stylesheet">
 
+    <link href="<?=base_url()?>bootstraptemplate/css/galeria.css" rel="stylesheet">
+
 
 
   </head>
@@ -111,6 +113,13 @@
               <i class="fa fa-fw fa-table"></i>
               <span class="nav-link-text">
                 Circulares</span>
+            </a>
+          </li>
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/galeria">
+              <i class="fa fa-fw fa-table"></i>
+              <span class="nav-link-text">
+                Galeria</span>
             </a>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">

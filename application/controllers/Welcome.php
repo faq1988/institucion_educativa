@@ -164,6 +164,18 @@ class Welcome extends CI_Controller {
   }
 
 
+  public function galeria()
+  {
+    if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $this -> load -> view('menu');
+    $this -> load -> view('header');
+    $this -> load -> view('galeria');
+  }
+
 
 	public function key()
 	{
