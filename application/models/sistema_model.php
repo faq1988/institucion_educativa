@@ -29,6 +29,16 @@ function obtener_mensajes_alumno($id_tutor)
 }
 
 
+function obtener_ultimos_mensajes($id_tutor)
+{
+	$this->db->where('id_tutor =', $id_tutor);
+	$this->db->order_by('fechahora', 'DESC');
+	$this->db->limit(3);
+	$query= $this->db->get('mensajes_alumnos');      
+    if ($query->num_rows() >0 ) return $query;//->result();
+}
+
+
 
 
 

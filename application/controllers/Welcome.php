@@ -4,9 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends CI_Controller {
 
 
-
-
-
 	public function index(){
 
 	if (!$this->session->userdata('username'))
@@ -14,9 +11,19 @@ class Welcome extends CI_Controller {
       redirect('login');
     }
 
+    $this->load->model('usuario_model');
+    $usuario= $this->usuario_model->obtener_usuario($this->session->userdata('username')) ->result();
+
+    $header=array();
+    $this->load->model('sistema_model');
+    $ultimos_mensajes=  $this->sistema_model->obtener_ultimos_mensajes($usuario[0]->id_persona);
+
+    if (isset($ultimos_mensajes))
+    $header['ultimos_mensajes']= $ultimos_mensajes->result();
+
     $this -> load -> view('menu');
-    $this -> load -> view('header');
-	$this -> load -> view('welcome_message');
+    $this -> load -> view('header', $header);
+	  $this -> load -> view('welcome_message');
   }
 
 
