@@ -54,6 +54,21 @@ class Alumno_controller extends CI_Controller {
 
 
 
+  public function asignar_alumnos_clases()
+  {
+    $clase = $this->input->post('clase');
+    $lista_alumnos = $this->input->post('lista_alumnos');
+
+    $this->load->model('clase_model');
+
+    for ($i=0 ; $i < sizeof($lista_alumnos) ; $i++)
+    {
+        $this->clase_model->insertar_alumno_clase($clase, $lista_alumnos[$i]);
+    }
+
+    redirect("welcome");
+  }
+
 
 
 }

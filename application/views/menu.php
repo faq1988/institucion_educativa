@@ -16,6 +16,8 @@
     <!-- Bootstrap core CSS -->
     <link href="<?=base_url()?>bootstraptemplate/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+
+
     <!-- Custom fonts for this template -->
     <link href="<?=base_url()?>bootstraptemplate/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -27,9 +29,11 @@
     <!-- Custom styles for this template -->
     <link href="<?=base_url()?>bootstraptemplate/css/sb-admin.css" rel="stylesheet">
 
-    <link href="<?=base_url()?>bootstraptemplate/css/jumbotron.css" rel="stylesheet">
+    <!--link href="<?=base_url()?>bootstraptemplate/css/jumbotron.css" rel="stylesheet"-->
 
     <link href="<?=base_url()?>bootstraptemplate/css/galeria.css" rel="stylesheet">
+
+
 
 
 
@@ -80,6 +84,14 @@
             </a>
           </li>
 
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/registrar_inasistencia">
+              <i class="fa fa-fw fa-area-chart"></i>
+              <span class="nav-link-text">
+                Inasistencias</span>
+            </a>
+          </li>
+
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
             <a class="nav-link" href="<?=base_url()?>Welcome/crear_maestro">
               <i class="fa fa-fw fa-table"></i>
@@ -88,7 +100,7 @@
             </a>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?=base_url()?>Welcome/clases">
               <i class="fa fa-fw fa-table"></i>
               <span class="nav-link-text">
                 Aulas</span>

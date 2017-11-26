@@ -177,6 +177,26 @@ class Welcome extends CI_Controller {
   }
 
 
+  public function clases()
+  {
+   if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $data=array();
+    $this->load->model('clase_model');
+    //$alumnos=  $this->persona_model->obtener_personas('ALUMNO');
+    $alumnos= $this->clase_model->obtener_alumnos_sin_clase();
+    
+    if (isset($alumnos))
+    $data['alumnos']= $alumnos->result();
+
+    $this -> load -> view('menu');
+    $this -> load -> view('header');
+    $this -> load -> view('clases', $data); 
+  }
+
 	public function key()
 	{
 		echo md5('peliculas');
