@@ -197,6 +197,27 @@ class Welcome extends CI_Controller {
     $this -> load -> view('clases', $data); 
   }
 
+
+  public function consultar_autorizaciones()
+  {
+   if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $data=array();
+    $this->load->model('autorizaciones_model');
+    //$alumnos=  $this->persona_model->obtener_personas('ALUMNO');
+    $autorizaciones= $this->autorizaciones_model->obtener_autorizaciones();
+    
+    if (isset($autorizaciones))
+    $data['autorizaciones']= $autorizaciones->result();
+
+    $this -> load -> view('menu');
+    $this -> load -> view('header');
+    $this -> load -> view('autorizaciones', $data); 
+  }
+
 	public function key()
 	{
 		echo md5('peliculas');

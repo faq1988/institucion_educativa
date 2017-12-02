@@ -92,6 +92,22 @@
             </a>
           </li>
 
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/consultar_autorizaciones">
+              <i class="fa fa-fw fa-area-chart"></i>
+              <span class="nav-link-text">
+                Autorizaciones</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/deberes_o_tareas">
+              <i class="fa fa-fw fa-area-chart"></i>
+              <span class="nav-link-text">
+                Deberes/Tareas</span>
+            </a>
+          </li>
+
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
             <a class="nav-link" href="<?=base_url()?>Welcome/crear_maestro">
               <i class="fa fa-fw fa-table"></i>
