@@ -21,7 +21,9 @@ function crear_menu($data){
 
 
 
-  function obtener_menu(){
+  function obtener_menu($monday, $friday){
+  		$this->db->where('fecha >=', $monday);
+    	$this->db->where('fecha <=', $friday);
   		$query = $this->db->get('menu_semanal');
   		if ($query->num_rows() >0 ) return $query;//->result();
   			}

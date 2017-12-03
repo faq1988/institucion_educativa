@@ -97,9 +97,12 @@ class Welcome extends CI_Controller {
 		{
 			redirect('login');
 		}
+    $monday = date( 'Y-m-d', strtotime( 'monday this week' ) );
+    $friday = date( 'Y-m-d', strtotime( 'friday this week' ) );
+
 		$data=array();
 		$this->load->model('menu_model');
-		$menu=  $this->menu_model->obtener_menu();
+		$menu=  $this->menu_model->obtener_menu($monday, $friday);
 
 		if (isset($menu))
 		$data['menu']= $menu->result();
@@ -216,6 +219,18 @@ class Welcome extends CI_Controller {
     $this -> load -> view('menu');
     $this -> load -> view('header');
     $this -> load -> view('autorizaciones', $data); 
+  }
+
+  public function estadisticas()
+  {
+   if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $this -> load -> view('menu');
+    $this -> load -> view('header');
+    $this -> load -> view('estadisticas');     
   }
 
 	public function key()

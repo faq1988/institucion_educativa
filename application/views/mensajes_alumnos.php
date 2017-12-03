@@ -25,13 +25,36 @@
 
 <div class="container">
 
+
+  <div class="row" style="padding-top:50px">
+    
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" >
+
+            <div class="list-group list-group-horizontal" style="display: inline-block">
+                <a href="#" class="list-group-item active" style="display: inline-block">Eliminar</a>
+                <a href="#" class="list-group-item active" style="display: inline-block">Marcar</a>
+                <a href="#" class="list-group-item active" style="display: inline-block">Responder</a>
+                <a href="#" class="list-group-item active" style="display: inline-block">Reenviar</a>
+            </div>
+
+        </div>
+      
+
+  </div>
+
+</br>
+
+
+
+
 <table class="table">
   <thead class="thead-default">
     <tr>
-      <th>#</th>
-      <th>Fecha</th>
+      <th>Seleccionar</th>
+      <th>#</th>      
       <th>Asunto</th>
       <th>Mensaje</th>
+      <th>Fecha</th>
       
       
     </tr>
@@ -41,12 +64,18 @@
                 if (isset($mensajes)){
                  for($i=0; $i<sizeof($mensajes); $i++){ ?>
             <tr>
-              <th scope="row"><?php echo $mensajes[$i]->id;?></th>
-              <td><?php echo $mensajes[$i]->fechahora;?></td>
+              <?php echo "<td><input type='checkbox' name='lista_mensajes[]' value='". $mensajes[$i]->id . "' </td>"; ?>
+              <th scope="row"><?php echo $mensajes[$i]->id;?></th>              
               <td><?php echo $mensajes[$i]->asunto;?></td>
               <td><?php echo $mensajes[$i]->mensaje;?></td>              
+              <td><?php echo $mensajes[$i]->fechahora;?></td>
             </tr>
-            <?php } }?>
+            <?php } }
+
+            else
+                echo "Aún no posee ningún mensaje";
+
+            ?>
   </tbody>
 </table>
 </div>

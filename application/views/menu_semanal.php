@@ -21,9 +21,9 @@
 </br>
 
 <div class="container">
-<button type="button" class="btn btn-primary btn-lg col-1"><--</button>
+<button type="button" class="btn btn-primary btn-lg col-1"><i class="fa fa-fw fa-arrow-left"></i></button>
 <button type="button" class="btn btn-primary btn-lg col-9" disabled>Hoy</button>
-<button type="button" class="btn btn-primary btn-lg col-1">--></button>
+<button type="button" class="btn btn-primary btn-lg col-1"><i class="fa fa-fw fa-arrow-right"></i></button>
 </div>
 
 </br>

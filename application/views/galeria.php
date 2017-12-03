@@ -19,7 +19,7 @@
 <div class="container">
 
 
-<h1>Pure Css Responsive Masonry Gallery</h1>
+<h1>Galería de imágenes</h1>
 <div class="col-md-12">
 <div class="row">
 <hr>
