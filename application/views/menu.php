@@ -48,6 +48,24 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
+        
+
+
+<!--
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************  
+-->
+
+        <?php if ($rol == 'SUPERUSER') {?>
+
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 
         
@@ -162,6 +180,421 @@
 
 
         </ul>
+
+        <?php }?>
+
+<!--
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************  
+-->
+
+        <?php if ($rol == 'TUTOR') {?>
+
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+        
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu2">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseInscripciones" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-male"></i>
+              <span class="nav-link-text">
+                Alumnos</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseInscripciones">
+              <li>                
+                <a href="<?=base_url()?>Welcome/crear_alumno"><i class="fa fa-fw fa-plus"></i> Nuevo</a>
+              </li>
+              <li>                
+                <a href="<?=base_url()?>Welcome/buscar_alumno"><i class="fa fa-fw fa-search"></i> Buscar</a>
+              </li>
+            </ul>
+          </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu2">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseActividades" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-tv"></i>
+              <span class="nav-link-text">
+                Actividad</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseActividades">
+              <li>
+                <a href="<?=base_url()?>Welcome/crear_evento"><i class="fa fa-fw fa-plus"></i> Registrar evento</a>
+              </li>
+              <li>
+                <a href="<?=base_url()?>Welcome/eventos"><i class="fa fa-fw fa-search"></i> Últimas actividades</a>
+              </li>
+            </ul>
+          </li>
+
+
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/registrar_inasistencia">
+              <i class="fa fa-fw fa-check-square-o"></i>
+              <span class="nav-link-text">
+                Inasistencias</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/consultar_autorizaciones">
+              <i class="fa fa-fw fa-bullhorn"></i>
+              <span class="nav-link-text">
+                Autorizaciones</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/deberes_o_tareas">
+              <i class="fa fa-fw fa-calendar"></i>
+              <span class="nav-link-text">
+                Deberes/Tareas</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/crear_maestro">
+              <i class="fa fa-fw fa-graduation-cap"></i>
+              <span class="nav-link-text">
+                Maestros</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/clases">
+              <i class="fa fa-fw fa-group"></i>
+              <span class="nav-link-text">
+                Aulas</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/estadisticas">
+              <i class="fa fa-fw fa-bar-chart"></i>
+              <span class="nav-link-text">
+                Estadísticas</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/menu_semanal">
+              <i class="fa fa-fw fa-cutlery"></i>
+              <span class="nav-link-text">
+                Menú semanal</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-commenting-o"></i>
+              <span class="nav-link-text">
+                Circulares</span>
+            </a>
+          </li>
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/galeria">
+              <i class="fa fa-fw fa-camera"></i>
+              <span class="nav-link-text">
+                Galeria</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/contacto">
+              <i class="fa fa-fw fa-phone"></i>
+              <span class="nav-link-text">
+                Contacto</span>
+            </a>
+          </li>
+
+
+
+        </ul>
+
+        <?php }?>
+
+
+<!--
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************  
+-->
+
+        <?php if ($rol == 'ESTABLECIMIENTO') {?>
+
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+        
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu2">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseInscripciones" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-male"></i>
+              <span class="nav-link-text">
+                Alumnos</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseInscripciones">
+              <li>                
+                <a href="<?=base_url()?>Welcome/crear_alumno"><i class="fa fa-fw fa-plus"></i> Nuevo</a>
+              </li>
+              <li>                
+                <a href="<?=base_url()?>Welcome/buscar_alumno"><i class="fa fa-fw fa-search"></i> Buscar</a>
+              </li>
+            </ul>
+          </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu2">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseActividades" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-tv"></i>
+              <span class="nav-link-text">
+                Actividad</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseActividades">
+              <li>
+                <a href="<?=base_url()?>Welcome/crear_evento"><i class="fa fa-fw fa-plus"></i> Registrar evento</a>
+              </li>
+              <li>
+                <a href="<?=base_url()?>Welcome/eventos"><i class="fa fa-fw fa-search"></i> Últimas actividades</a>
+              </li>
+            </ul>
+          </li>
+
+
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/registrar_inasistencia">
+              <i class="fa fa-fw fa-check-square-o"></i>
+              <span class="nav-link-text">
+                Inasistencias</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/consultar_autorizaciones">
+              <i class="fa fa-fw fa-bullhorn"></i>
+              <span class="nav-link-text">
+                Autorizaciones</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/deberes_o_tareas">
+              <i class="fa fa-fw fa-calendar"></i>
+              <span class="nav-link-text">
+                Deberes/Tareas</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/crear_maestro">
+              <i class="fa fa-fw fa-graduation-cap"></i>
+              <span class="nav-link-text">
+                Maestros</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/clases">
+              <i class="fa fa-fw fa-group"></i>
+              <span class="nav-link-text">
+                Aulas</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/estadisticas">
+              <i class="fa fa-fw fa-bar-chart"></i>
+              <span class="nav-link-text">
+                Estadísticas</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/menu_semanal">
+              <i class="fa fa-fw fa-cutlery"></i>
+              <span class="nav-link-text">
+                Menú semanal</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-commenting-o"></i>
+              <span class="nav-link-text">
+                Circulares</span>
+            </a>
+          </li>
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/galeria">
+              <i class="fa fa-fw fa-camera"></i>
+              <span class="nav-link-text">
+                Galeria</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/contacto">
+              <i class="fa fa-fw fa-phone"></i>
+              <span class="nav-link-text">
+                Contacto</span>
+            </a>
+          </li>
+
+
+
+        </ul>
+
+        <?php }?>
+
+
+
+<!--
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************  
+-->
+
+        <?php if ($rol == 'MAESTRO') {?>
+
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+        
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu2">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseInscripciones" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-male"></i>
+              <span class="nav-link-text">
+                Alumnos</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseInscripciones">
+              <li>                
+                <a href="<?=base_url()?>Welcome/crear_alumno"><i class="fa fa-fw fa-plus"></i> Nuevo</a>
+              </li>
+              <li>                
+                <a href="<?=base_url()?>Welcome/buscar_alumno"><i class="fa fa-fw fa-search"></i> Buscar</a>
+              </li>
+            </ul>
+          </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu2">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseActividades" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-tv"></i>
+              <span class="nav-link-text">
+                Actividad</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseActividades">
+              <li>
+                <a href="<?=base_url()?>Welcome/crear_evento"><i class="fa fa-fw fa-plus"></i> Registrar evento</a>
+              </li>
+              <li>
+                <a href="<?=base_url()?>Welcome/eventos"><i class="fa fa-fw fa-search"></i> Últimas actividades</a>
+              </li>
+            </ul>
+          </li>
+
+
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/registrar_inasistencia">
+              <i class="fa fa-fw fa-check-square-o"></i>
+              <span class="nav-link-text">
+                Inasistencias</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/consultar_autorizaciones">
+              <i class="fa fa-fw fa-bullhorn"></i>
+              <span class="nav-link-text">
+                Autorizaciones</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+            <a class="nav-link" href="<?=base_url()?>Welcome/deberes_o_tareas">
+              <i class="fa fa-fw fa-calendar"></i>
+              <span class="nav-link-text">
+                Deberes/Tareas</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/crear_maestro">
+              <i class="fa fa-fw fa-graduation-cap"></i>
+              <span class="nav-link-text">
+                Maestros</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/clases">
+              <i class="fa fa-fw fa-group"></i>
+              <span class="nav-link-text">
+                Aulas</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/estadisticas">
+              <i class="fa fa-fw fa-bar-chart"></i>
+              <span class="nav-link-text">
+                Estadísticas</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/menu_semanal">
+              <i class="fa fa-fw fa-cutlery"></i>
+              <span class="nav-link-text">
+                Menú semanal</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="#">
+              <i class="fa fa-fw fa-commenting-o"></i>
+              <span class="nav-link-text">
+                Circulares</span>
+            </a>
+          </li>
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/galeria">
+              <i class="fa fa-fw fa-camera"></i>
+              <span class="nav-link-text">
+                Galeria</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="<?=base_url()?>Welcome/contacto">
+              <i class="fa fa-fw fa-phone"></i>
+              <span class="nav-link-text">
+                Contacto</span>
+            </a>
+          </li>
+
+
+
+        </ul>
+
+        <?php }?>
+
+<!--
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************
+  ****************************************************************************************************************************************************  
+-->
+
         <ul class="navbar-nav sidenav-toggler">
           <li class="nav-item">
             <a class="nav-link text-center" id="sidenavToggler">

@@ -24,7 +24,9 @@ public function __construct()
         $this->load->model('usuario_model');
         if ($this->usuario_model->login($_POST['username'], md5($_POST['password'])))
           {
+            $usuario= $this->usuario_model->obtener_usuario($_POST['username'])->row();            
             $this->session->set_userdata('username', $_POST['username']);
+            $this->session->set_userdata('rol', $usuario->rol);
             redirect('welcome');
           }
           else
