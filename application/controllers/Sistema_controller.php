@@ -6,7 +6,8 @@ class Sistema_controller extends CI_Controller {
 	public function __construct()
 {
   parent::__construct();
-  $this->load->model('sistema_model');
+  $this->load->model('Sistema_model');
+  $this->load->model('Usuario_model');
 }
 
 
@@ -29,6 +30,26 @@ class Sistema_controller extends CI_Controller {
 
       redirect(welcome);
   }
+
+
+
+  public function crear_usuario()
+  {
+       
+    
+      $data = array(        
+      'nombre_usuario' => $this->input->post('nombre_usuario'),      
+      'contraseña' => $this->input->post('contraseña'),      
+      'email' => $this->input->post('email'),        
+      'rol' => $this->input->post('rol'),
+      'id_persona' => $this->input->post('maestro'),
+      );
+
+      
+      $this->Usuario_model->crear_usuario($data);
+
+      redirect(welcome);
+  }  
 
 
 

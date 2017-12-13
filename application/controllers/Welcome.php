@@ -224,7 +224,7 @@ class Welcome extends CI_Controller {
   }
 
 
-  public function consultar_autorizaciones()
+  public function buscar_autorizaciones()
   {
    if (!$this->session->userdata('username'))
     {
@@ -260,10 +260,30 @@ class Welcome extends CI_Controller {
     $this -> load -> view('estadisticas');     
   }
 
-	public function key()
-	{
-		echo md5('peliculas');
-	}
+
+    public function crear_usuario_maestros()
+  {
+   if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+    $data=array();
+    $this->load->model('persona_model');
+    $maestros=  $this->persona_model->obtener_personas('MAESTRO');
+
+    if (isset($maestros))
+    $data['maestros']= $maestros->result();
+
+    $menu['rol']= $this->session->userdata('rol');
+
+    $data['rol']= 'MAESTRO';
+    
+    $this -> load -> view('menu', $menu);
+    $this -> load -> view('header');
+    $this -> load -> view('crear_usuario', $data);     
+  }
+
+
 
 
 

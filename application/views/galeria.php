@@ -10,7 +10,7 @@
           <li class="breadcrumb-item">
             <a href="#">Institución educativa</a>
           </li>
-          <li class="breadcrumb-item active">Inicio</li>
+          <li class="breadcrumb-item active">Galería</li>
         </ol>
 
 
@@ -18,8 +18,9 @@
 
 <div class="container">
 
-
-<h1>Galería de imágenes</h1>
+<center>
+<h2>Galería de imágenes</h2>
+</center>
 <div class="col-md-12">
 <div class="row">
 <hr>

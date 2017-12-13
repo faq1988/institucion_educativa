@@ -71,17 +71,23 @@
          <?php if ($rol == 'SUPERUSER' or $rol == 'ESTABLECIMIENTO' or $rol == 'MAESTRO' or $rol == 'TUTOR') {?>
 
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu2">
-            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseInscripciones" data-parent="#exampleAccordion">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAlumnos" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-male"></i>
               <span class="nav-link-text">
                 Alumnos</span>
             </a>
-            <ul class="sidenav-second-level collapse" id="collapseInscripciones">
+            <ul class="sidenav-second-level collapse" id="collapseAlumnos">
               <li>                
                 <a href="<?=base_url()?>Welcome/crear_alumno"><i class="fa fa-fw fa-plus"></i> Nuevo</a>
               </li>
               <li>                
                 <a href="<?=base_url()?>Welcome/buscar_alumno"><i class="fa fa-fw fa-search"></i> Buscar</a>
+              </li>
+              <li>                
+                <a href="<?=base_url()?>Welcome/buscar_autorizaciones"><i class="fa fa-fw fa-bullhorn"></i></i> Autorizaciones</a>
+              </li>
+              <li>                
+                <a href="<?=base_url()?>Welcome/buscar_inasistencias"><i class="fa fa-fw fa-check-square-o"></i></i></i> Inasistencias</a>
               </li>
             </ul>
           </li>
@@ -107,28 +113,9 @@
           </li>
 
           <?php }?>
-          <?php if ($rol == 'SUPERUSER' or $rol == 'ESTABLECIMIENTO' or $rol == 'MAESTRO' or $rol == 'TUTOR') {?>
+         
+         
 
-           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-            <a class="nav-link" href="<?=base_url()?>Welcome/registrar_inasistencia">
-              <i class="fa fa-fw fa-check-square-o"></i>
-              <span class="nav-link-text">
-                Inasistencias</span>
-            </a>
-          </li>
-
-          <?php }?>
-          <?php if ($rol == 'SUPERUSER' or $rol == 'ESTABLECIMIENTO' or $rol == 'MAESTRO' or $rol == 'TUTOR') {?>
-
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-            <a class="nav-link" href="<?=base_url()?>Welcome/consultar_autorizaciones">
-              <i class="fa fa-fw fa-bullhorn"></i>
-              <span class="nav-link-text">
-                Autorizaciones</span>
-            </a>
-          </li>
-
-          <?php }?>
           <?php if ($rol == 'SUPERUSER' or $rol == 'ESTABLECIMIENTO' or $rol == 'MAESTRO' or $rol == 'TUTOR') {?>
 
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
@@ -140,17 +127,31 @@
           </li>
 
           <?php }?>
-          <?php if ($rol == 'SUPERUSER' or $rol == 'ESTABLECIMIENTO' or $rol == 'MAESTRO' or $rol == 'TUTOR') {?>
 
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-            <a class="nav-link" href="<?=base_url()?>Welcome/crear_maestro">
+           <?php if ($rol == 'SUPERUSER' or $rol == 'ESTABLECIMIENTO' or $rol == 'MAESTRO' or $rol == 'TUTOR') {?>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu2">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMaestros" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-graduation-cap"></i>
               <span class="nav-link-text">
                 Maestros</span>
             </a>
+            <ul class="sidenav-second-level collapse" id="collapseMaestros">
+              <li>                
+                <a href="<?=base_url()?>Welcome/crear_maestro"><i class="fa fa-fw fa-plus"></i> Nuevo</a>
+              </li>
+              <li>                
+                <a href="<?=base_url()?>Welcome/buscar_maestros"><i class="fa fa-fw fa-search"></i> Buscar</a>
+              </li>
+              <li>                
+                <a href="<?=base_url()?>Welcome/crear_usuario_maestros"><i class="fa fa-fw fa-search"></i> Crear usuario</a>
+              </li>
+            </ul>
           </li>
 
           <?php }?>
+
+         
           <?php if ($rol == 'SUPERUSER' or $rol == 'ESTABLECIMIENTO' or $rol == 'MAESTRO' or $rol == 'TUTOR') {?>
 
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">

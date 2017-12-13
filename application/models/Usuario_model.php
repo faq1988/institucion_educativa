@@ -24,10 +24,10 @@ else
 
 
 
-function crearInscripcion($data, $torneo, $tipo){
+function crear_usuario($data){
 		
-		$this->db->insert('persona', array('nombre'=>$data['nombre'], 'categoria'=>$data['categoria'], 'torneo'=>$torneo));
-
+		$this->db->insert('usuario', array('username'=>$data['nombre_usuario'], 'password'=>md5($data['contraseña']), 'email'=>$data['email'], 'rol'=>$data['rol']
+			, 'id_establecimiento'=>$data['id_establecimiento'], 'id_persona'=>$data['id_persona']));
 	}
 
 
