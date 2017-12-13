@@ -285,6 +285,25 @@ class Welcome extends CI_Controller {
 
 
 
+  public function ver_perfil()
+  {
+    if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+    
+    $menu['rol']= $this->session->userdata('rol');
+    $data=array();
+    $this->load->model('usuario_model');
+    $perfil=  $this->usuario_model->obtener_perfil($this->session->userdata('username'));
+
+    if (isset($perfil))
+    $data['perfil']= $perfil->result();
+
+    $this -> load -> view('menu', $menu);
+    $this -> load -> view('header');
+    $this -> load -> view('perfil', $data);    
+  }
 
 
 

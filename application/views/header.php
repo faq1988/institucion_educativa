@@ -117,11 +117,29 @@
             </form>
           </li-->
 
-          <li class="nav-item">
+          <!--li class="nav-item">
             <a class="nav-link" href="<?=base_url()?>login/logout">
               <i class="fa fa-fw fa-sign-out"></i>
               Salir</a>
+          </li-->
+
+          <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" data-toggle="dropdown" href="#">
+                        <i class="fa fa-gear fa-fw"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="<?=base_url()?>welcome/ver_perfil"><i class="fa fa-user fa-fw"></i> Mi perfil</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-gear fa-fw"></i> Opciones</a>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="<?=base_url()?>login/logout"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
           </li>
+
+
         </ul>
       </div>
     </nav>
