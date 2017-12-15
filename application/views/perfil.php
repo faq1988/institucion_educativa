@@ -15,7 +15,7 @@
 
 
 
-        <div class="card mb-3">
+        <div class="card mb-3 border-dark">
   <img class="card-img-top" src="<?=base_url()?>img/header.png" alt="Card image cap">
   <div class="card-body">
     <h4 class="card-title"><?php echo $perfil[0]->nombre; ?>, <?php echo $perfil[0]->apellido; ?></h4>

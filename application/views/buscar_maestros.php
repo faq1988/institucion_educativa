@@ -28,7 +28,7 @@
 <div class="container">
 
 <!--table class="table"-->
-<table id="tablaalumnos" class="table" cellspacing="0" width="100%">
+<table id="tablamaestros" class="table" cellspacing="0" width="100%">
 
   <thead class="thead-default">
     <tr>
@@ -41,14 +41,14 @@
   </thead>
   <tbody>
             <?php
-                if (isset($alumnos)){
-                 for($i=0; $i<sizeof($alumnos); $i++){ ?>
+                if (isset($maestros)){
+                 for($i=0; $i<sizeof($maestros); $i++){ ?>
             <tr>
-              <th scope="row"><?php echo $alumnos[$i]->id;?></th>
-              <td><?php echo $alumnos[$i]->dni;?></td>
-              <td><?php echo $alumnos[$i]->apellido;?>, <?php echo $alumnos[$i]->nombre;?></td>
-              <td><?php echo $alumnos[$i]->edad;?></td>
-              <?php echo "<td><input type='checkbox' name='lista_alumnos[]' value='". $alumnos[$i]->id . "' </td>"; ?>
+              <th scope="row"><?php echo $maestros[$i]->id;?></th>
+              <td><?php echo $maestros[$i]->dni;?></td>
+              <td><?php echo $maestros[$i]->apellido;?>, <?php echo $maestros[$i]->nombre;?></td>
+              <td><?php echo $maestros[$i]->edad;?></td>
+              <?php echo "<td><input type='checkbox' name='lista_maestros[]' value='". $maestros[$i]->id . "' </td>"; ?>
             </tr>
             <?php } }?>
   </tbody>
@@ -109,7 +109,7 @@
 
     <script type="text/javascript">
           $(document).ready(function() {
-           $('#tablaalumnos').DataTable( {
+           $('#tablamaestros').DataTable( {
                     "language": {
                         "decimal":        "",
                         "emptyTable":     "No hay datos para mostrar",

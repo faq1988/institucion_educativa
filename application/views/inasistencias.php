@@ -10,56 +10,56 @@
           <li class="breadcrumb-item">
             <a href="#">Institución educativa</a>
           </li>
-          <li class="breadcrumb-item active">Inicio</li>
+          <li class="breadcrumb-item active">Alumnos</li>
+          <li class="breadcrumb-item active">Inasistencias</li>
         </ol>
-
-
 
 
 
 <center>
 
- 
 
-
-
-
+</br>
 
 <div class="container">
-
-<!--table class="table"-->
-<table id="tablaalumnos" class="table" cellspacing="0" width="100%">
-
-  <thead class="thead-default">
-    <tr>
-      <th>#</th>
-      <th>DNI</th>
-      <th>Nombre</th>
-      <th>Edad</th>
-      <th>Seleccionar</th>
-    </tr>
-  </thead>
-  <tbody>
-            <?php
-                if (isset($alumnos)){
-                 for($i=0; $i<sizeof($alumnos); $i++){ ?>
-            <tr>
-              <th scope="row"><?php echo $alumnos[$i]->id;?></th>
-              <td><?php echo $alumnos[$i]->dni;?></td>
-              <td><?php echo $alumnos[$i]->apellido;?>, <?php echo $alumnos[$i]->nombre;?></td>
-              <td><?php echo $alumnos[$i]->edad;?></td>
-              <?php echo "<td><input type='checkbox' name='lista_alumnos[]' value='". $alumnos[$i]->id . "' </td>"; ?>
-            </tr>
-            <?php } }?>
-  </tbody>
-</table>
+<button type="button" class="btn btn-primary btn-lg col-1"><--</button>
+<button type="button" class="btn btn-primary btn-lg col-9" disabled>Hoy</button>
+<button type="button" class="btn btn-primary btn-lg col-1">--></button>
 </div>
 
+</br>
+
+<div class="container">
+            <table class="table" id="tablainasistencias">
+              <thead class="thead-default">
+                <tr>
+                  <th>#</th>
+                  <th>Fecha</th>                  
+                  <th>Alumno</th>                  
+                  <th>Descripción</th>
+                  <th>Visto</th>                  
+                </tr>
+              </thead>
+              <tbody>
+
+                <?php
+                    if (isset($inasistencias)){
+                     for($i=0; $i<sizeof($inasistencias); $i++){ ?>
+                <tr>
+                  <th scope="row"><?php echo $i+1;?></th>
+                  <td><?php echo $inasistencias[$i]->fechahora;?></td>                  
+                  <td><?php echo $inasistencias[$i]->id_alumno;?></td>                  
+                  <td><?php echo $inasistencias[$i]->descripcion;?></td>
+                  <td><?php echo $inasistencias[$i]->visto ? "SI" : "NO" ;?></td>
+                  
+                </tr>
+                <?php } }?>
+              </tbody>
+            </table>
+          </div>
 
 
 </center>
-
-
 
 
 
@@ -104,12 +104,13 @@
     <script src="<?=base_url()?>bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?=base_url()?>bootstraptemplate/vendor/datatables/jquery.dataTables.js"></script>
     <script src="<?=base_url()?>bootstraptemplate/vendor/datatables/dataTables.bootstrap4.js"></script>
+
     <!-- Custom scripts for this template -->
     <script src="<?=base_url()?>bootstraptemplate/js/sb-admin.min.js"></script>
 
-    <script type="text/javascript">
+     <script type="text/javascript">
           $(document).ready(function() {
-           $('#tablaalumnos').DataTable( {
+           $('#tablainasistencias').DataTable( {
                     "language": {
                         "decimal":        "",
                         "emptyTable":     "No hay datos para mostrar",
@@ -140,7 +141,6 @@
 
           } );
     </script>
-
 
   </body>
 

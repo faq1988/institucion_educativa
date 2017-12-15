@@ -161,6 +161,27 @@ class Welcome extends CI_Controller {
     $this -> load -> view('buscar_alumno', $data);
   }
 
+  public function buscar_maestros()
+  {
+    if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $data=array();
+    $this->load->model('persona_model');
+    $maestros=  $this->persona_model->obtener_personas('MAESTRO');
+
+    if (isset($maestros))
+    $data['maestros']= $maestros->result();
+
+    $menu['rol']= $this->session->userdata('rol');
+
+    $this -> load -> view('menu', $menu);
+    $this -> load -> view('header');
+    $this -> load -> view('buscar_maestros', $data);
+  }
+
     public function ver_mensajes_alumno()
   {
     if (!$this->session->userdata('username'))
@@ -303,6 +324,28 @@ class Welcome extends CI_Controller {
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('perfil', $data);    
+  }
+
+
+  public function buscar_inasistencias()
+  {
+   if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $data=array();
+    $this->load->model('inasistencias_model');    
+    $inasistencias= $this->inasistencias_model->obtener_inasistencias();
+    
+    if (isset($inasistencias))
+    $data['inasistencias']= $inasistencias->result();
+
+    $menu['rol']= $this->session->userdata('rol');
+
+    $this -> load -> view('menu', $menu);
+    $this -> load -> view('header');
+    $this -> load -> view('inasistencias', $data); 
   }
 
 
