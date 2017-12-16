@@ -13,11 +13,11 @@ public function __construct()
 
 
 
-function crear_menu($data){
-		/*$this->db->insert('evento', array('accion'=>$accion, 'descripcion'=>$descripcion,
-			'id_alumno'=>$id_alumno));
-      */
+function insertar_menu_semanal($data){
+		$this->db->insert('menu_semanal', array('desayuno'=>$data['desayuno'], 'almuerzo'=>$data['almuerzo'], 'merienda'=>$data['merienda'], 'cena'=>$data['cena'], 
+      'fecha'=>$data['fecha']));      
 	}
+  
 
 
 

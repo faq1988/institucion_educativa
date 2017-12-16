@@ -17,6 +17,41 @@
 
 <center>
 
+<h2>Agregar menú</h2>
+<form action="<?=base_url()?>menu_semanal_controller/agregar_menu" method="POST">
+<div class="form-row">
+  
+</div>
+</br>
+  <div class="form-row">
+    <div class="col-3">
+      <input type="text" name="desayuno" class="form-control" placeholder="Desayuno">
+    </div>
+    <div class="col-3">
+      <input type="text" name="almuerzo" class="form-control" placeholder="Almuerzo">
+    </div>
+    <div class="col-3">
+      <input type="text" name="merienda" class="form-control" placeholder="Merienda">
+    </div>
+    <div class="col-3">
+      <input type="text" name="cena" class="form-control" placeholder="Cena">
+    </div>    
+  </div>
+</br>
+  <div class="form-row">
+    <div class="col-4">
+    <input class="form-control" name="fecha" type="date" id="example-date-input" placeholder="Fecha">
+  </div>
+    <div class="col-8">
+      <button type="submit" class="btn btn-primary">Insertar</button>
+    </div>
+  </div>
+
+
+
+</form>
+
+</br></br>
 
 </br>
 
@@ -43,15 +78,15 @@
               <tbody>
 
                 <?php
-                    if (isset($menu)){
-                     for($i=0; $i<sizeof($menu); $i++){ ?>
+                    if (isset($menu_semanal)){
+                     for($i=0; $i<sizeof($menu_semanal); $i++){ ?>
                 <tr>
                   <th scope="row"><?php echo $i+1;?></th>
-                  <td><?php echo $menu[$i]->fecha;?></td>
-                  <td><?php echo $menu[$i]->desayuno;?></td>
-                  <td><?php echo $menu[$i]->almuerzo;?></td>
-                  <td><?php echo $menu[$i]->merienda;?></td>
-                  <td><?php echo $menu[$i]->cena;?></td>
+                  <td><?php echo $menu_semanal[$i]->fecha;?></td>
+                  <td><?php echo $menu_semanal[$i]->desayuno;?></td>
+                  <td><?php echo $menu_semanal[$i]->almuerzo;?></td>
+                  <td><?php echo $menu_semanal[$i]->merienda;?></td>
+                  <td><?php echo $menu_semanal[$i]->cena;?></td>
                 </tr>
                 <?php } }?>
               </tbody>

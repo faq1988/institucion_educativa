@@ -113,10 +113,10 @@ class Welcome extends CI_Controller {
 
 		$data=array();
 		$this->load->model('menu_model');
-		$menu=  $this->menu_model->obtener_menu($monday, $friday);
+		$menu_semanal=  $this->menu_model->obtener_menu($monday, $friday);
 
-		if (isset($menu))
-		$data['menu']= $menu->result();
+		if (isset($menu_semanal))
+		$data['menu_semanal']= $menu_semanal->result();
 
 		$menu['rol']= $this->session->userdata('rol');
 
