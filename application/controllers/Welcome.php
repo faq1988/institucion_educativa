@@ -22,7 +22,7 @@ class Welcome extends CI_Controller {
     $header['ultimos_mensajes']= $ultimos_mensajes->result();
     $menu['rol']= $this->session->userdata('rol');
 
-
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header', $header);
 	  $this -> load -> view('welcome_message');
@@ -44,10 +44,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
 		$this -> load -> view('eventos', $data);
-		$this -> default_vars();
   }
 
 
@@ -60,11 +60,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
-
+		$this -> default_vars();
      $this -> load -> view('menu', $menu);
      $this -> load -> view('header');
 	   $this -> load -> view('crear_alumno');
-		 $this -> default_vars();
   }
 
 
@@ -77,10 +76,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
 		$this -> load -> view('contacto');
-		$this -> default_vars();
   }
 
   public function crear_evento()
@@ -99,10 +98,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
 		$this -> load -> view('crear_evento', $data);
-		$this -> default_vars();
   }
 
 
@@ -124,10 +123,10 @@ class Welcome extends CI_Controller {
 
 		$menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
 		$this -> load -> view('header');
 		$this -> load -> view('menu_semanal', $data);
-		$this -> default_vars();
 	}
 
 
@@ -140,10 +139,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('crear_maestro');
-		$this -> default_vars();
   }
 
   public function buscar_alumno()
@@ -162,10 +161,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('buscar_alumno', $data);
-		$this -> default_vars();
   }
 
   public function buscar_maestros()
@@ -184,10 +183,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('buscar_maestros', $data);
-		$this -> default_vars();
   }
 
     public function ver_mensajes_alumno()
@@ -209,10 +208,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('mensajes_alumnos', $data);
-		$this -> default_vars();
   }
 
 
@@ -225,10 +224,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('galeria');
-		$this -> default_vars();
   }
 
 
@@ -249,10 +248,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('clases', $data);
-		$this -> default_vars();
   }
 
 
@@ -273,10 +272,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('autorizaciones', $data);
-		$this -> default_vars();
   }
 
   public function estadisticas()
@@ -288,10 +287,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('estadisticas');
-		$this -> default_vars();
   }
 
 
@@ -312,10 +311,10 @@ class Welcome extends CI_Controller {
 
     $data['rol']= 'MAESTRO';
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('crear_usuario', $data);
-		$this -> default_vars();
   }
 
 
@@ -335,10 +334,10 @@ class Welcome extends CI_Controller {
     if (isset($perfil))
     $data['perfil']= $perfil->result();
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('perfil', $data);
-		$this -> default_vars();
   }
 
 
@@ -358,10 +357,10 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('inasistencias', $data);
-		$this -> default_vars();
   }
 
 
@@ -382,23 +381,23 @@ class Welcome extends CI_Controller {
 
     $menu['rol']= $this->session->userdata('rol');
 
+		$this -> default_vars();
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('buscar_aulas', $data);
-		$this -> default_vars();
   }
 
   public function default_vars($js_array=array(),$css_array=array()){
     $js=array( );
     $css=array( );
 
-		array_push($js,'<script src="<?=base_url()?>bootstraptemplate/vendor/jquery/jquery.min.js"></script>');
-		array_push($js,'<script src="<?=base_url()?>bootstraptemplate/vendor/popper/popper.min.js"></script>');
-		array_push($js,'<script src="<?=base_url()?>bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js"></script>');
-		array_push($js,'<script src="<?=base_url()?>bootstraptemplate/vendor/chart.js/Chart.min.js"></script>');
-		array_push($js,'<script src="<?=base_url()?>bootstraptemplate/vendor/datatables/jquery.dataTables.js"></script>');
+		array_push($js,base_url().'bootstraptemplate/vendor/jquery/jquery.min.js');
+		array_push($js,base_url().'bootstraptemplate/vendor/popper/popper.min.js');
+		array_push($js,base_url().'bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js');
+		array_push($js,base_url().'ootstraptemplate/vendor/chart.js/Chart.min.js');
+		array_push($js,base_url().'bootstraptemplate/vendor/datatables/jquery.dataTables.js');
 
-		array_push($js,'<script src="<?=base_url()?>bootstraptemplate/js/sb-admin.js"></script>');
+		array_push($js,base_url().'bootstraptemplate/js/sb-admin.js');
 
 		$data=array();
 		$data["js_to_load"]=array_unique($js);
