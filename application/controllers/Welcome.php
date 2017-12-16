@@ -222,7 +222,7 @@ class Welcome extends CI_Controller {
   }
 
 
-  public function clases()
+  public function asignar_clases()
   {
    if (!$this->session->userdata('username'))
     {
@@ -349,5 +349,26 @@ class Welcome extends CI_Controller {
   }
 
 
+  public function buscar_aulas()
+  {
+   if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $data=array();
+    $this->load->model('Clase_model');
+    //$alumnos=  $this->persona_model->obtener_personas('ALUMNO');
+    $aulas= $this->Clase_model->obtener_aulas();
+    
+    if (isset($aulas))
+    $data['aulas']= $aulas->result();
+
+    $menu['rol']= $this->session->userdata('rol');
+
+    $this -> load -> view('menu', $menu);
+    $this -> load -> view('header');
+    $this -> load -> view('buscar_aulas', $data); 
+  }
 
 }

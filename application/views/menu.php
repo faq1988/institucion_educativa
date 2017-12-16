@@ -154,13 +154,22 @@
          
           <?php if ($rol == 'SUPERUSER' or $rol == 'ESTABLECIMIENTO' or $rol == 'MAESTRO' or $rol == 'TUTOR') {?>
 
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-            <a class="nav-link" href="<?=base_url()?>Welcome/clases">
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu2">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAulas" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-group"></i>
               <span class="nav-link-text">
                 Aulas</span>
             </a>
+            <ul class="sidenav-second-level collapse" id="collapseAulas">
+              <li>                
+                <a href="<?=base_url()?>Welcome/buscar_aulas"><i class="fa fa-fw fa-search"></i> Buscar</a>
+              </li>
+              <li>                
+                <a href="<?=base_url()?>Welcome/asignar_clases"><i class="fa fa-fw fa-plus"></i> Asignar</a>
+              </li>              
+            </ul>
           </li>
+
 
           <?php }?>
           <?php if ($rol == 'SUPERUSER' or $rol == 'ESTABLECIMIENTO' or $rol == 'MAESTRO' or $rol == 'TUTOR') {?>

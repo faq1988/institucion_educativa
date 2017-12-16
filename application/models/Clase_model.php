@@ -19,9 +19,14 @@ function insertar_alumno_clase($id_clase, $id_alumno){
 	}
 
 
+ function insertar_aula($data)
+ {
+ 	$this->db->insert('aula', array('nombre'=>$data['nombre'], 'capacidad'=>$data['capacidad']));
+ }
 
-  function obtener_clases(){
-  		$query = $this->db->get('clase');
+
+  function obtener_aulas(){
+  		$query = $this->db->get('aula');
   		if ($query->num_rows() >0 ) return $query;//->result();
   		}
 
