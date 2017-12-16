@@ -19,7 +19,7 @@
 
 <center>
 
- 
+
 
 
 
@@ -52,8 +52,8 @@
 
   <thead class="thead-default">
     <tr>
-      <th>#</th>      
-      <th>Nombre</th>      
+      <th>#</th>
+      <th>Nombre</th>
       <th>Capacidad</th>
       <th>Seleccionar</th>
     </tr>
@@ -63,7 +63,7 @@
                 if (isset($aulas)){
                  for($i=0; $i<sizeof($aulas); $i++){ ?>
             <tr>
-              <th scope="row"><?php echo $aulas[$i]->id;?></th>                            
+              <th scope="row"><?php echo $aulas[$i]->id;?></th>
               <td><?php echo $aulas[$i]->nombre;?></td>
               <td><?php echo $aulas[$i]->capacidad;?></td>
               <?php echo "<td><input type='checkbox' name='lista_aulas[]' value='". $aulas[$i]->id . "' </td>"; ?>
@@ -116,14 +116,6 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?=base_url()?>bootstraptemplate/vendor/jquery/jquery.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/popper/popper.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/datatables/jquery.dataTables.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/datatables/dataTables.bootstrap4.js"></script>
-    <!-- Custom scripts for this template -->
-    <script src="<?=base_url()?>bootstraptemplate/js/sb-admin.min.js"></script>
 
     <script type="text/javascript">
           $(document).ready(function() {

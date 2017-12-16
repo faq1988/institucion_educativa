@@ -19,7 +19,7 @@
 
 <center>
 
- 
+
 
 
 
@@ -97,15 +97,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?=base_url()?>bootstraptemplate/vendor/jquery/jquery.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/popper/popper.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/datatables/jquery.dataTables.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/datatables/dataTables.bootstrap4.js"></script>
-    <!-- Custom scripts for this template -->
-    <script src="<?=base_url()?>bootstraptemplate/js/sb-admin.min.js"></script>
 
     <script type="text/javascript">
           $(document).ready(function() {

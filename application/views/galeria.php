@@ -26,42 +26,42 @@
 <hr>
 
   <div class="gal">
-  
+
   <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-  
+
     <img src="https://i.pinimg.com/736x/d3/db/d9/d3dbd9912779441fc0f000d5b04bbc1d--lisy-vossen.jpg" alt="">
-    
+
       <img src="https://www.lapatilla.com/site/wp-content/uploads/2017/08/Meme.jpg" alt="">
-      
+
       <img src="http://images.nationalgeographic.com.es/medio/2016/03/01/la-nina-afgana-20-anos-despues_400x400_b80dfc88.jpg" alt="">
-      
-      
-    
+
+
+
       <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
         <img src="https://preview.ibb.co/mWpE3Q/2.jpg" alt="">
-      
+
       <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-      
+
         <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="">
-      
+
         <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
         <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt=""><img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
         <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-        
+
         <img src="https://c1.staticflickr.com/9/8580/29175052782_f897d765b2_b.jpg" alt="">
         <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
         <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
           <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="">
-      
+
             <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="">
-      
+
             <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
         <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
         <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
         <img src="https://i.pinimg.com/736x/d3/db/d9/d3dbd9912779441fc0f000d5b04bbc1d--lisy-vossen.jpg" alt="">
-        
+
   </div>
-  
+
 </div>
 </div>
 </div>
@@ -108,13 +108,6 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?=base_url()?>bootstraptemplate/vendor/jquery/jquery.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/popper/popper.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="<?=base_url()?>bootstraptemplate/js/sb-admin.min.js"></script>
 
   </body>
 

@@ -20,7 +20,7 @@
 
 <?php //echo validation_errors();?>
 
-<?php 
+<?php
 echo form_open('Alumno_controller/crear_alumno');
 
 
@@ -195,13 +195,6 @@ echo form_close();
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?=base_url()?>bootstraptemplate/vendor/jquery/jquery.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/popper/popper.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="<?=base_url()?>bootstraptemplate/js/sb-admin.min.js"></script>
 
   </body>
 

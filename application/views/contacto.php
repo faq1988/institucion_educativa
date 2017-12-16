@@ -21,7 +21,7 @@
 
 <?php //echo validation_errors();?>
 
-<?php 
+<?php
 echo form_open('Sistema_controller/nuevo_contacto');
 
 
@@ -81,7 +81,7 @@ $comentario = array(
     'size'  =>  '30',
     'style' =>  'width:50%',
     'class' => 'form-control',
-    'placeholder' => 'Comentario',    
+    'placeholder' => 'Comentario',
 
   );
 
@@ -167,13 +167,6 @@ echo form_close();
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?=base_url()?>bootstraptemplate/vendor/jquery/jquery.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/popper/popper.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="<?=base_url()?>bootstraptemplate/js/sb-admin.min.js"></script>
 
   </body>
 

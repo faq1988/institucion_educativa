@@ -22,7 +22,7 @@
 
 <?php //echo validation_errors();?>
 
-<?php 
+<?php
 
 //$hidden = array('username' => 'Joe', 'member_id' => '234');
 $hidden = array('rol' => $rol);
@@ -102,15 +102,15 @@ echo form_input($email);
 echo '</br>';
 
 ?>
-        
-                
+
+
  <select name="maestro" style="width: 30%" class="form-control">
-  <option value="0"> Seleccione un maestro </option>       
+  <option value="0"> Seleccione un maestro </option>
 <?php
                 if (isset($maestros)){
                  for($i=0; $i<sizeof($maestros); $i++){ ?>
             <?php echo "<option value='".$maestros[$i]->id."'>". $maestros[$i]->apellido .", " .$maestros[$i]->nombre . " </option>"; ?>
-                       
+
             <?php } }?>
 </select>
 
@@ -162,13 +162,6 @@ echo form_close();
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?=base_url()?>bootstraptemplate/vendor/jquery/jquery.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/popper/popper.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="<?=base_url()?>bootstraptemplate/js/sb-admin.min.js"></script>
 
   </body>
 

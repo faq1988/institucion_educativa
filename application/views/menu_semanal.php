@@ -20,7 +20,7 @@
 <h2>Agregar menú</h2>
 <form action="<?=base_url()?>menu_semanal_controller/agregar_menu" method="POST">
 <div class="form-row">
-  
+
 </div>
 </br>
   <div class="form-row">
@@ -35,7 +35,7 @@
     </div>
     <div class="col-3">
       <input type="text" name="cena" class="form-control" placeholder="Cena">
-    </div>    
+    </div>
   </div>
 </br>
   <div class="form-row">
@@ -132,14 +132,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?=base_url()?>bootstraptemplate/vendor/jquery/jquery.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/popper/popper.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="<?=base_url()?>bootstraptemplate/js/sb-admin.min.js"></script>
 
 
 

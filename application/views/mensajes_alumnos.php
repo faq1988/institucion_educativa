@@ -17,7 +17,7 @@
 
 <center>
 
- 
+
 
 
 
@@ -27,7 +27,7 @@
 
 
   <div class="row" style="padding-top:50px">
-    
+
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" >
 
             <div class="list-group list-group-horizontal" style="display: inline-block">
@@ -38,7 +38,7 @@
             </div>
 
         </div>
-      
+
 
   </div>
 
@@ -51,12 +51,12 @@
   <thead class="thead-default">
     <tr>
       <th>Seleccionar</th>
-      <th>#</th>      
+      <th>#</th>
       <th>Asunto</th>
       <th>Mensaje</th>
       <th>Fecha</th>
-      
-      
+
+
     </tr>
   </thead>
   <tbody>
@@ -65,9 +65,9 @@
                  for($i=0; $i<sizeof($mensajes); $i++){ ?>
             <tr>
               <?php echo "<td><input type='checkbox' name='lista_mensajes[]' value='". $mensajes[$i]->id . "' </td>"; ?>
-              <th scope="row"><?php echo $mensajes[$i]->id;?></th>              
+              <th scope="row"><?php echo $mensajes[$i]->id;?></th>
               <td><?php echo $mensajes[$i]->asunto;?></td>
-              <td><?php echo $mensajes[$i]->mensaje;?></td>              
+              <td><?php echo $mensajes[$i]->mensaje;?></td>
               <td><?php echo $mensajes[$i]->fechahora;?></td>
             </tr>
             <?php } }
@@ -120,14 +120,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?=base_url()?>bootstraptemplate/vendor/jquery/jquery.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/popper/popper.min.js"></script>
-    <script src="<?=base_url()?>bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="<?=base_url()?>bootstraptemplate/js/sb-admin.min.js"></script>
 
   </body>
 
