@@ -29,8 +29,18 @@ function crear_persona($data, $tipo){
 
         }
 
+  function obtener_persona_por_id($id){
+      $this->db->where('id=',$id);      
+      $query = $this->db->get('persona');
+      if ($query->num_rows() >0 ) return $query;//->result();
+        }
 
 
+function eliminar_persona($id)
+	{
+		$this->db->where('id =', $id);
+		$this->db->delete('persona');
+	}
 
 
 

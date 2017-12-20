@@ -387,6 +387,31 @@ class Welcome extends CI_Controller {
     $this -> load -> view('buscar_aulas', $data);
   }
 
+
+  public function ver_alumno()
+  {
+    if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+    $data=array();
+    $this->load->model('persona_model');
+    $id_alumno = $this->uri->segment(3);
+
+    $alumno= $this->persona_model->obtener_persona_por_id($id_alumno);
+    if (isset($alumno))
+    $data['alumno']= $alumno->result();
+    $menu['rol']= $this->session->userdata('rol');
+
+    $this -> default_vars();
+    $this -> load -> view('menu', $menu);
+    $this -> load -> view('header');
+    $this -> load -> view('ver_alumno', $data);
+  }
+
+
+
+
   public function default_vars($js_array=array(),$css_array=array()){
     $js=array( );
     $css=array( );
@@ -394,8 +419,9 @@ class Welcome extends CI_Controller {
 		array_push($js,base_url().'bootstraptemplate/vendor/jquery/jquery.min.js');
 		array_push($js,base_url().'bootstraptemplate/vendor/popper/popper.min.js');
 		array_push($js,base_url().'bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js');
-		array_push($js,base_url().'ootstraptemplate/vendor/chart.js/Chart.min.js');
+		array_push($js,base_url().'bootstraptemplate/vendor/chart.js/Chart.min.js');
 		array_push($js,base_url().'bootstraptemplate/vendor/datatables/jquery.dataTables.js');
+    array_push($js,base_url().'bootstraptemplate/vendor/datatables/dataTables.bootstrap4.js');
 
 		array_push($js,base_url().'bootstraptemplate/js/sb-admin.js');
 
