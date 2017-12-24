@@ -394,7 +394,7 @@ class Welcome extends CI_Controller {
 		array_push($js,base_url().'bootstraptemplate/vendor/jquery/jquery.min.js');
 		array_push($js,base_url().'bootstraptemplate/vendor/popper/popper.min.js');
 		array_push($js,base_url().'bootstraptemplate/vendor/bootstrap/js/bootstrap.min.js');
-		array_push($js,base_url().'ootstraptemplate/vendor/chart.js/Chart.min.js');
+		array_push($js,base_url().'bootstraptemplate/vendor/chart.js/Chart.min.js');
 		array_push($js,base_url().'bootstraptemplate/vendor/datatables/jquery.dataTables.js');
 
 		array_push($js,base_url().'bootstraptemplate/js/sb-admin.js');
