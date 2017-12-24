@@ -36,7 +36,7 @@
       <th>DNI</th>
       <th>Nombre</th>
       <th>Edad</th>
-      <th>Seleccionar</th>
+      <th>Acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -48,7 +48,12 @@
               <td><?php echo $alumnos[$i]->dni;?></td>
               <td><?php echo $alumnos[$i]->apellido;?>, <?php echo $alumnos[$i]->nombre;?></td>
               <td><?php echo $alumnos[$i]->edad;?></td>
-              <?php echo "<td><input type='checkbox' name='lista_alumnos[]' value='". $alumnos[$i]->id . "' </td>"; ?>
+              <td>
+                <a href="<?php echo base_url() ?>Welcome/ver_alumno/<?php echo $alumnos[$i]->id; ?>"> <i title="Ver" class="fa fa-fw fa-eye"></i></a>                   
+                <a href="<?php echo base_url() ?>Alumno_controller/eliminar_alumno/<?php echo $alumnos[$i]->id; ?>"> <i title="Eliminar" class="fa fa-fw fa-trash-o"></i></a>
+              </td>
+              
+              <?php //echo "<td><input type='checkbox' name='lista_alumnos[]' value='". $alumnos[$i]->id . "' </td>"; ?>
             </tr>
             <?php } }?>
   </tbody>
