@@ -16,18 +16,18 @@
 
 
 <center>
-<h2> Crear nuevo alumno</h2>
+<h2> Modificar alumno</h2>
 
 <?php //echo validation_errors();?>
 
 <?php
-echo form_open('Alumno_controller/crear_alumno');
+echo form_open('Alumno_controller/modificar_alumno/'. $alumno[0]->id);
 
 
 $nombre = array(
     'name' => 'nombre',
     'id'  => 'nombre',
-    'value' => '',
+    'value' => ''. $alumno[0]->nombre,
     'maxlength' => '30',
     'size'  =>  '30',
     'style' =>  'width:50%',
@@ -39,7 +39,7 @@ $nombre = array(
 $apellido = array(
     'name' => 'apellido',
     'id'  => 'apellido',
-    'value' => '',
+    'value' => ''. $alumno[0]->apellido,
     'maxlength' => '30',
     'size'  =>  '30',
     'style' =>  'width:50%',
@@ -51,7 +51,7 @@ $apellido = array(
 $edad = array(
     'name' => 'edad',
     'id'  => 'edad',
-    'value' => '',
+    'value' => ''. $alumno[0]->edad,
     'maxlength' => '30',
     'size'  =>  '30',
     'style' =>  'width:50%',
@@ -63,7 +63,7 @@ $edad = array(
 $dni = array(
     'name' => 'dni',
     'id'  => 'dni',
-    'value' => '',
+    'value' => ''. $alumno[0]->dni,
     'maxlength' => '30',
     'size'  =>  '30',
     'style' =>  'width:50%',
@@ -75,7 +75,7 @@ $dni = array(
 $email = array(
     'name' => 'email',
     'id'  => 'email',
-    'value' => '',
+    'value' => ''. $alumno[0]->email,
     'maxlength' => '30',
     'size'  =>  '30',
     'style' =>  'width:50%',
@@ -87,7 +87,7 @@ $email = array(
 $direccion = array(
     'name' => 'direccion',
     'id'  => 'direccion',
-    'value' => '',
+    'value' => ''. $alumno[0]->direccion,
     'maxlength' => '30',
     'size'  =>  '30',
     'style' =>  'width:50%',
@@ -99,7 +99,7 @@ $direccion = array(
 $ciudad = array(
     'name' => 'ciudad',
     'id'  => 'ciudad',
-    'value' => '',
+    'value' => ''. $alumno[0]->ciudad,
     'maxlength' => '30',
     'size'  =>  '30',
     'style' =>  'width:50%',
@@ -145,6 +145,7 @@ echo form_close();
 
 
 ?>
+<input type="hidden" name="id_alumno" value="<?php echo $alumno[0]->id; ?>" />
 </center>
 
 

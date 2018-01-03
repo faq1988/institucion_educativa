@@ -16,7 +16,7 @@
 
 
 <nav class="navbar navbar-light bg-faded">
-  <a class="navbar-brand" href="<?=base_url()?>Welcome/modificar_alumno">
+  <a class="navbar-brand" href="<?=base_url()?>Welcome/modificar_alumno/<?php echo $alumno[0]->id; ?>">
     <i class="fa fa-fw fa-pencil"></i>
     Modificar
   </a>
@@ -33,7 +33,6 @@
 </br>
 </br>
 
-<input type="hidden" name="id_alumno" value="<?php echo $alumno[0]->id; ?>" />
 
   <div class="card mb-3 border-dark">  
         <div class="card-body">

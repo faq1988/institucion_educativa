@@ -80,6 +80,27 @@ class Alumno_controller extends CI_Controller {
   }
 
 
+
+public function modificar_alumno()
+  {
+    $id_alumno = $this->uri->segment(3);
+
+    $data = array(
+      'nombre' => $this->input->post('nombre'),
+      'apellido' => $this->input->post('apellido'),
+      'edad' => $this->input->post('edad'),
+      'dni' => $this->input->post('dni'),
+      'email' => $this->input->post('email'),
+      'direccion' => $this->input->post('direccion'),
+      'ciudad' => $this->input->post('ciudad'),
+
+      );
+
+    $this->persona_model->modificar_persona($id_alumno, $data);
+
+    redirect('Welcome/buscar_alumno');
+  }
+
   
 
 }

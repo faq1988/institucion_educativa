@@ -42,6 +42,19 @@ function eliminar_persona($id)
 		$this->db->delete('persona');
 	}
 
+  function modificar_persona($id_alumno, $data)
+  {
+    $this->db->set('nombre', $data['nombre']);
+    $this->db->set('apellido', $data['apellido']);
+    $this->db->set('edad', $data['edad']);
+    $this->db->set('dni', $data['dni']);
+    $this->db->set('email', $data['email']);
+    $this->db->set('direccion', $data['direccion']);
+    $this->db->set('ciudad', $data['ciudad']);
+    $this->db->where('id', $id_alumno);
+    $this->db->update('persona');
+  }
+
 
 
 
