@@ -43,7 +43,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <a class="navbar-brand" href="<?=base_url()?>">Institución educativa</a>
+      <a class="navbar-brand" href="<?=base_url()?>">Kinder Time</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -119,7 +119,7 @@
           <?php if ($rol == 'SUPERUSER' or $rol == 'ESTABLECIMIENTO' or $rol == 'MAESTRO' or $rol == 'TUTOR') {?>
 
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-            <a class="nav-link" href="<?=base_url()?>Welcome/deberes_o_tareas">
+            <a class="nav-link" href="<?=base_url()?>Welcome/deberes_tareas">
               <i class="fa fa-fw fa-calendar"></i>
               <span class="nav-link-text">
                 Deberes/Tareas</span>

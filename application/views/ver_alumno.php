@@ -15,6 +15,26 @@
 
 
 
+<nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" href="<?=base_url()?>Welcome/modificar_alumno">
+    <i class="fa fa-fw fa-pencil"></i>
+    Modificar
+  </a>
+  <a class="navbar-brand" href="<?=base_url()?>Welcome/asignar_tutores">
+    <i class="fa fa-fw fa-home"></i>
+    Tutores
+  </a>
+  <a class="navbar-brand" href="<?=base_url()?>Welcome/crear_usuario_alumno">
+    <i class="fa fa-fw fa-user"></i>
+    Usuarios
+  </a>
+</nav>
+
+</br>
+</br>
+
+<input type="hidden" name="id_alumno" value="<?php echo $alumno[0]->id; ?>" />
+
   <div class="card mb-3 border-dark">  
         <div class="card-body">
           <h4 class="card-title"><?php echo $alumno[0]->nombre; ?>, <?php echo $alumno[0]->apellido; ?></h4>

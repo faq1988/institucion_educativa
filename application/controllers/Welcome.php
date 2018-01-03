@@ -410,7 +410,49 @@ class Welcome extends CI_Controller {
   }
 
 
+   public function crear_usuario_alumno()
+  {
+    if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+    $data=array();
+    $this->load->model('persona_model');
+    $id_alumno = $this->uri->segment(3);
 
+    $alumno= $this->persona_model->obtener_persona_por_id($id_alumno);
+    if (isset($alumno))
+    $data['alumno']= $alumno->result();
+    $menu['rol']= $this->session->userdata('rol');
+
+    $this -> default_vars();
+    $this -> load -> view('menu', $menu);
+    $this -> load -> view('header');
+    $this -> load -> view('crear_usuario_alumno', $data);
+  }
+
+
+  public function deberes_tareas()
+  {
+   if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $data=array();
+    $this->load->model('Deberes_model');
+    $deberes= $this->Deberes_model->obtener_deberes();
+
+    if (isset($deberes))
+    $data['deberes']= $deberes->result();
+
+    $menu['rol']= $this->session->userdata('rol');
+
+    $this -> default_vars();
+    $this -> load -> view('menu', $menu);
+    $this -> load -> view('header');
+    $this -> load -> view('deberes', $data);
+  }
 
   public function default_vars($js_array=array(),$css_array=array()){
     $js=array( );

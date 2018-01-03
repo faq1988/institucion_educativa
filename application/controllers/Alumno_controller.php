@@ -80,13 +80,6 @@ class Alumno_controller extends CI_Controller {
   }
 
 
-  public function ver_alumno()
-  {
-    $id_alumno = $this->uri->segment(3);
-
-    $this->persona_model->obtener_persona_por_id($id_alumno);
-
-    redirect('Welcome/ver_alumno');
-  }
+  
 
 }
