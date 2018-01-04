@@ -52,9 +52,22 @@ public function obtener_perfil($username)
 
 
 
+public function obtener_usuarios_alumno($id_alumno)
+{
+	$this->db->select('u.id, u.username, u.email');
+	$this->db->from('usuario u');
+	$this->db->join('hijos_por_tutores p', 'p.id_tutor = u.id_persona', 'left');		
+	$this->db->where('p.id_alumno =', $id_alumno);		
+	$query = $this->db->get();
+  		if ($query->num_rows() >0 ) return $query;//->result();
+}
 
 
-
+function eliminar_usuario($id)
+	{
+		$this->db->where('id =', $id);
+		$this->db->delete('usuario');
+	}
 
 
 }

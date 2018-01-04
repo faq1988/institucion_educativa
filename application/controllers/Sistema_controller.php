@@ -52,7 +52,35 @@ class Sistema_controller extends CI_Controller {
   }  
 
 
+    public function crear_usuario_alumno()
+  {
+      //$id_alumno = $this->uri->segment(3);
+    
+      $data = array(        
+      'nombre_usuario' => $this->input->post('nombre_usuario'),      
+      'contraseña' => $this->input->post('contraseña'),      
+      'email' => $this->input->post('email'),        
+      'rol' => $this->input->post('rol'),
+      'id_persona' => $this->input->post('tutor'),
+      'id_alumno' => $this->input->post('id_alumno'),
+      );
+            
+      $this->Usuario_model->crear_usuario($data);
+
+      redirect("Welcome/ver_usuarios_alumno/".$data['id_alumno']);
+  }  
 
 
+
+
+  public function eliminar_usuario()
+  {
+    $id_usuario = $this->uri->segment(3);
+    $id_alumno = $this->uri->segment(4);
+
+    $this->Usuario_model->eliminar_usuario($id_usuario);
+
+    redirect("Welcome/ver_usuarios_alumno/".$id_alumno);
+  }
 
 }

@@ -57,6 +57,15 @@ function eliminar_persona($id)
 
 
 
+  function obtener_tutores ($id_persona)
+  {
+      $this->db->select('u.id, p.vinculo, u.apellido, u.nombre');
+      $this->db->from('persona u');
+      $this->db->join('hijos_por_tutores p', 'p.id_tutor = u.id', 'left');    
+      $this->db->where('p.id_alumno =', $id_persona);    
+      $query = $this->db->get();
+      if ($query->num_rows() >0 ) return $query;//->result();
+  }
 
 
 

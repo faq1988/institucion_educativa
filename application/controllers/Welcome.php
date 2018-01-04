@@ -423,7 +423,17 @@ class Welcome extends CI_Controller {
     $alumno= $this->persona_model->obtener_persona_por_id($id_alumno);
     if (isset($alumno))
     $data['alumno']= $alumno->result();
+
+       
+    $tutores=  $this->persona_model->obtener_tutores($id_alumno);
+
+    if (isset($tutores))
+    $data['tutores']= $tutores->result();
+
     $menu['rol']= $this->session->userdata('rol');
+
+    $data['rol']= 'TUTOR';
+    $data['id_alumno']= $id_alumno;
 
     $this -> default_vars();
     $this -> load -> view('menu', $menu);
@@ -475,6 +485,29 @@ class Welcome extends CI_Controller {
     $this -> load -> view('menu', $menu);
     $this -> load -> view('header');
     $this -> load -> view('modificar_alumno', $data);
+  }
+
+
+    public function ver_usuarios_alumno()
+  {
+    if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+    $data=array();
+    $this->load->model('usuario_model');
+    $id_alumno = $this->uri->segment(3);
+
+    $usuarios= $this->usuario_model->obtener_usuarios_alumno($id_alumno);
+    if (isset($usuarios))
+    $data['usuarios']= $usuarios->result();
+    $menu['rol']= $this->session->userdata('rol');
+    $data['id_alumno']=$id_alumno;
+
+    $this -> default_vars();
+    $this -> load -> view('menu', $menu);
+    $this -> load -> view('header');
+    $this -> load -> view('usuarios_alumno', $data);
   }
 
   public function default_vars($js_array=array(),$css_array=array()){

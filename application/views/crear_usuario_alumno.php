@@ -10,7 +10,7 @@
           <li class="breadcrumb-item">
             <a href="#">Institución educativa</a>
           </li>
-          <li class="breadcrumb-item active">Maestros</li>
+          <li class="breadcrumb-item active">Alumnos</li>
           <li class="breadcrumb-item active">Crear usuario</li>
         </ol>
 
@@ -25,10 +25,10 @@
 <?php
 
 //$hidden = array('username' => 'Joe', 'member_id' => '234');
-$hidden = array('rol' => $rol);
+$hidden = array('rol' => $rol, 'id_alumno' => $id_alumno);
 
 
-echo form_open('Sistema_controller/crear_usuario', '', $hidden);
+echo form_open('Sistema_controller/crear_usuario_alumno', '', $hidden);
 
 
 $nombre_usuario = array(
@@ -103,9 +103,19 @@ echo '</br>';
 
 ?>
 
+ <select name="tutor" style="width: 30%" class="form-control">
+  <option value="0"> Seleccione un tutor </option>
+<?php
+                if (isset($tutores)){
+                 for($i=0; $i<sizeof($tutores); $i++){ ?>
+            <?php echo "<option value='".$tutores[$i]->id."'>". $tutores[$i]->vinculo .": ".$tutores[$i]->apellido .", " .$tutores[$i]->nombre . " </option>"; ?>
+
+            <?php } }?>
+</select>
 
 </br>
 </br>
+
 <?php
 echo form_submit('enviar','Enviar');
 

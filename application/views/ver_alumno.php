@@ -15,7 +15,7 @@
 
 
 
-<nav class="navbar navbar-light bg-faded">
+<!--nav class="navbar navbar-light bg-faded">
   <a class="navbar-brand" href="<?=base_url()?>Welcome/modificar_alumno/<?php echo $alumno[0]->id; ?>">
     <i class="fa fa-fw fa-pencil"></i>
     Modificar
@@ -24,11 +24,36 @@
     <i class="fa fa-fw fa-home"></i>
     Tutores
   </a>
-  <a class="navbar-brand" href="<?=base_url()?>Welcome/crear_usuario_alumno">
+  <a class="navbar-brand" href="<?=base_url()?>Welcome/ver_usuarios_alumno/<?php echo $alumno[0]->id; ?>">
     <i class="fa fa-fw fa-user"></i>
     Usuarios
   </a>
-</nav>
+</nav-->
+
+
+<div class="row" style="padding-top:50px">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" >
+
+            <div class="list-group list-group-horizontal" style="display: inline-block">
+                <a class="list-group-item active" style="display: inline-block" href="<?=base_url()?>Welcome/modificar_alumno/<?php echo $alumno[0]->id; ?>">
+                <i class="fa fa-fw fa-pencil"></i>
+                Modificar
+                </a>
+                <a class="list-group-item active" style="display: inline-block" href="<?=base_url()?>Welcome/asignar_tutores">
+                <i class="fa fa-fw fa-home"></i>
+                Tutores
+                </a>
+                <a class="list-group-item active" style="display: inline-block" href="<?=base_url()?>Welcome/ver_usuarios_alumno/<?php echo $alumno[0]->id; ?>">
+                <i class="fa fa-fw fa-user"></i>
+                Usuarios
+                </a>              
+            </div>
+        
+        </div>
+
+
+  </div>
 
 </br>
 </br>
