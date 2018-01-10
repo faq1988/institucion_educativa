@@ -70,6 +70,13 @@ function eliminar_usuario($id)
 	}
 
 
+function cambiar_password($username, $password)
+{
+	$this->db->set('password', $password);    
+    $this->db->where('username', $username);
+    $this->db->update('usuario');
+}
+
 }
 
 

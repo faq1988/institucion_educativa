@@ -4,11 +4,13 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)
  */
 html {
+
   position: relative;
   min-height: 100%;
   font-size: 15px; }
 
 body.sticky-footer {
+  
   margin-bottom: 56px; }
   body.sticky-footer .content-wrapper {
     min-height: calc(100vh - 56px - 56px); }

@@ -130,6 +130,8 @@
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li><a class="dropdown-item" href="<?=base_url()?>welcome/ver_perfil"><i class="fa fa-user fa-fw"></i> Mi perfil</a>
                         </li>
+                        <li><a class="dropdown-item" href="<?=base_url()?>welcome/cambiar_password"><i class="fa fa-key fa-fw"></i> Cambiar contraseña</a>
+                        </li>
                         <li><a class="dropdown-item" href="#"><i class="fa fa-gear fa-fw"></i> Opciones</a>
                         </li>
                         <li class="dropdown-divider"></li>

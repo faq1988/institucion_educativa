@@ -510,6 +510,28 @@ class Welcome extends CI_Controller {
     $this -> load -> view('usuarios_alumno', $data);
   }
 
+
+  public function cambiar_password()
+  {
+    if (!$this->session->userdata('username'))
+    {
+      redirect('login');
+    }
+
+    $menu['rol']= $this->session->userdata('rol');
+    $data=array();
+    $this->load->model('usuario_model');
+    $perfil=  $this->usuario_model->obtener_perfil($this->session->userdata('username'));
+
+    if (isset($perfil))
+    $data['perfil']= $perfil->result();
+
+    $this -> default_vars();
+    $this -> load -> view('menu', $menu);
+    $this -> load -> view('header');
+    $this -> load -> view('cambio_password', $data);
+  }
+
   public function default_vars($js_array=array(),$css_array=array()){
     $js=array( );
     $css=array( );

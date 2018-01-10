@@ -83,4 +83,32 @@ class Sistema_controller extends CI_Controller {
     redirect("Welcome/ver_usuarios_alumno/".$id_alumno);
   }
 
+
+  public function cambiar_password()
+  {
+    $username= $this->session->userdata('username');
+
+    $contraseña_actual=$this->input->post('contraseña_actual');
+    $contraseña_anterior= md5($this->input->post('contraseña_anterior'));
+    $contraseña_nueva= $this->input->post('contraseña_nueva');
+    $contraseña_repetir= $this->input->post('contraseña_repetir');
+
+    if ($contraseña_actual != $contraseña_anterior)
+    {
+      var_dump('la contraseña ingresada no es su actual contraseña');exit;
+    }
+
+
+    if ($contraseña_nueva != $contraseña_repetir)
+    {
+      var_dump('las nuevas contraseñas no coinciden');exit;
+    }
+
+
+       
+      $this->Usuario_model->cambiar_password($username, md5($contraseña_nueva));
+
+      redirect(welcome);
+  }
+
 }
